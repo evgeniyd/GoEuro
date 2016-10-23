@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30B29B491DBD1419008DD2C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B481DBD1419008DD2C4 /* Result.framework */; };
 		30E5160E1DBCC8D3004C1E1C /* GoEuroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E516041DBCC8D3004C1E1C /* GoEuroKit.framework */; };
 		30E516131DBCC8D3004C1E1C /* GoEuroKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516121DBCC8D3004C1E1C /* GoEuroKitTests.swift */; };
 		30E516151DBCC8D3004C1E1C /* GoEuroKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E516071DBCC8D3004C1E1C /* GoEuroKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30B29B481DBD1419008DD2C4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		30E516041DBCC8D3004C1E1C /* GoEuroKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoEuroKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E516071DBCC8D3004C1E1C /* GoEuroKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoEuroKit.h; sourceTree = "<group>"; };
 		30E516081DBCC8D3004C1E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B29B491DBD1419008DD2C4 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B29B471DBD1419008DD2C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30B29B481DBD1419008DD2C4 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30E515FA1DBCC8D3004C1E1C = {
 			isa = PBXGroup;
 			children = (
 				30E516061DBCC8D3004C1E1C /* GoEuroKit */,
 				30E516111DBCC8D3004C1E1C /* GoEuroKitTests */,
 				30E516051DBCC8D3004C1E1C /* Products */,
+				30B29B471DBD1419008DD2C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,6 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,6 +357,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -351,6 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -448,6 +464,7 @@
 				30E5161A1DBCC8D3004C1E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30E5161B1DBCC8D3004C1E1C /* Build configuration list for PBXNativeTarget "GoEuroKitTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +473,7 @@
 				30E5161D1DBCC8D3004C1E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

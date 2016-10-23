@@ -15,6 +15,7 @@
 		30B29B361DBD049B008DD2C4 /* GoEuro_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B351DBD049B008DD2C4 /* GoEuro_iOSTests.swift */; };
 		30B29B411DBD081E008DD2C4 /* GoEuroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */; };
 		30B29B421DBD081E008DD2C4 /* GoEuroKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30B29B461DBD140A008DD2C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B451DBD140A008DD2C4 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		30B29B351DBD049B008DD2C4 /* GoEuro_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoEuro_iOSTests.swift; sourceTree = "<group>"; };
 		30B29B371DBD049B008DD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoEuroKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B29B451DBD140A008DD2C4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B29B411DBD081E008DD2C4 /* GoEuroKit.framework in Frameworks */,
+				30B29B461DBD140A008DD2C4 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +82,8 @@
 			children = (
 				30B29B1F1DBD049B008DD2C4 /* GoEuro-iOS */,
 				30B29B341DBD049B008DD2C4 /* GoEuro-iOSTests */,
-				30B29B441DBD0842008DD2C4 /* Frameworks */,
 				30B29B1E1DBD049B008DD2C4 /* Products */,
+				30B29B441DBD0842008DD2C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +121,7 @@
 		30B29B441DBD0842008DD2C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30B29B451DBD140A008DD2C4 /* Result.framework */,
 				30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */,
 			);
 			name = Frameworks;
@@ -298,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -312,6 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,6 +354,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -356,6 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
