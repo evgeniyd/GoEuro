@@ -10,6 +10,10 @@
 		30E5160E1DBCC8D3004C1E1C /* GoEuroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E516041DBCC8D3004C1E1C /* GoEuroKit.framework */; };
 		30E516131DBCC8D3004C1E1C /* GoEuroKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516121DBCC8D3004C1E1C /* GoEuroKitTests.swift */; };
 		30E516151DBCC8D3004C1E1C /* GoEuroKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E516071DBCC8D3004C1E1C /* GoEuroKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30E516221DBCCBB9004C1E1C /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516211DBCCBB9004C1E1C /* Offer.swift */; };
+		30E516231DBCCBB9004C1E1C /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516211DBCCBB9004C1E1C /* Offer.swift */; };
+		30E516271DBCCFF0004C1E1C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* Response.swift */; };
+		30E516281DBCCFF0004C1E1C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,8 @@
 		30E5160D1DBCC8D3004C1E1C /* GoEuroKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoEuroKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E516121DBCC8D3004C1E1C /* GoEuroKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoEuroKitTests.swift; sourceTree = "<group>"; };
 		30E516141DBCC8D3004C1E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E516211DBCCBB9004C1E1C /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		30E516261DBCCFF0004C1E1C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				30E516071DBCC8D3004C1E1C /* GoEuroKit.h */,
+				30E516201DBCCB33004C1E1C /* Model */,
 				30E5161E1DBCC92E004C1E1C /* Supporting Files */,
 			);
 			path = GoEuroKit;
@@ -92,6 +99,15 @@
 				30E516081DBCC8D3004C1E1C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30E516201DBCCB33004C1E1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30E516211DBCCBB9004C1E1C /* Offer.swift */,
+				30E516261DBCCFF0004C1E1C /* Response.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +173,7 @@
 					30E516031DBCC8D3004C1E1C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QL6S7D28EA;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					30E5160C1DBCC8D3004C1E1C = {
@@ -206,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E516271DBCCFF0004C1E1C /* Response.swift in Sources */,
+				30E516221DBCCBB9004C1E1C /* Offer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E516231DBCCBB9004C1E1C /* Offer.swift in Sources */,
+				30E516281DBCCFF0004C1E1C /* Response.swift in Sources */,
 				30E516131DBCC8D3004C1E1C /* GoEuroKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
