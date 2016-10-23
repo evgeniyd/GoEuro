@@ -13,10 +13,8 @@
 		30E516151DBCC8D3004C1E1C /* GoEuroKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E516071DBCC8D3004C1E1C /* GoEuroKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30E516221DBCCBB9004C1E1C /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516211DBCCBB9004C1E1C /* Offer.swift */; };
 		30E516231DBCCBB9004C1E1C /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516211DBCCBB9004C1E1C /* Offer.swift */; };
-		30E516271DBCCFF0004C1E1C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* Response.swift */; };
-		30E516281DBCCFF0004C1E1C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* Response.swift */; };
-		30E5162B1DBCD865004C1E1C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E5162A1DBCD865004C1E1C /* Result.swift */; };
-		30E5162C1DBCD865004C1E1C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E5162A1DBCD865004C1E1C /* Result.swift */; };
+		30E516271DBCCFF0004C1E1C /* OfferList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* OfferList.swift */; };
+		30E516281DBCCFF0004C1E1C /* OfferList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E516261DBCCFF0004C1E1C /* OfferList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +36,7 @@
 		30E516121DBCC8D3004C1E1C /* GoEuroKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoEuroKitTests.swift; sourceTree = "<group>"; };
 		30E516141DBCC8D3004C1E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30E516211DBCCBB9004C1E1C /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
-		30E516261DBCCFF0004C1E1C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		30E5162A1DBCD865004C1E1C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		30E516261DBCCFF0004C1E1C /* OfferList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +91,6 @@
 			children = (
 				30E516071DBCC8D3004C1E1C /* GoEuroKit.h */,
 				30E516201DBCCB33004C1E1C /* Model */,
-				30E516291DBCD84E004C1E1C /* Common */,
 				30E5161E1DBCC92E004C1E1C /* Supporting Files */,
 			);
 			path = GoEuroKit;
@@ -121,17 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				30E516211DBCCBB9004C1E1C /* Offer.swift */,
-				30E516261DBCCFF0004C1E1C /* Response.swift */,
+				30E516261DBCCFF0004C1E1C /* OfferList.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		30E516291DBCD84E004C1E1C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				30E5162A1DBCD865004C1E1C /* Result.swift */,
-			);
-			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E5162B1DBCD865004C1E1C /* Result.swift in Sources */,
-				30E516271DBCCFF0004C1E1C /* Response.swift in Sources */,
+				30E516271DBCCFF0004C1E1C /* OfferList.swift in Sources */,
 				30E516221DBCCBB9004C1E1C /* Offer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E516231DBCCBB9004C1E1C /* Offer.swift in Sources */,
-				30E516281DBCCFF0004C1E1C /* Response.swift in Sources */,
-				30E5162C1DBCD865004C1E1C /* Result.swift in Sources */,
+				30E516281DBCCFF0004C1E1C /* OfferList.swift in Sources */,
 				30E516131DBCC8D3004C1E1C /* GoEuroKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

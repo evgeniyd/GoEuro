@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  OfferList.swift
 //  GoEuroKit
 //
 //  Created by Evgen Dubinin on 10/23/16.
@@ -12,7 +12,7 @@ import Foundation
 // MARK: Model -
 ////////////////////////////////////
 
-public struct Response {
+public struct OfferList {
     public var data: [Offer]
 }
 
@@ -20,8 +20,8 @@ public struct Response {
 // MARK: Convenience methods -
 ////////////////////////////////////
 
-extension Response {
-    public var zeroItems: Bool {
+extension OfferList {
+    public var noOffers: Bool {
         get {
             return (self.data.count == 0)
         }
