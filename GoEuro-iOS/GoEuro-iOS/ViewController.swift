@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoEuroKit
 
 class ViewController: UIViewController {
 
