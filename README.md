@@ -23,7 +23,6 @@ The app uses [Carthage](https://github.com/Carthage/Carthage) as a dependancy ma
 * run `$ carthage bootstrap` 
 
 In order to build & run the app on a device, set the Development Team for the following targets:
-* GoEuroKit framework
 * GoEuro-iOS
 
 # License
