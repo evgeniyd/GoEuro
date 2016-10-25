@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305C7EDD1DBF64D4000193F2 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EDC1DBF64D4000193F2 /* OfferCell.swift */; };
 		30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B201DBD049B008DD2C4 /* AppDelegate.swift */; };
-		30B29B231DBD049B008DD2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B221DBD049B008DD2C4 /* ViewController.swift */; };
+		30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */; };
 		30B29B261DBD049B008DD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B29B241DBD049B008DD2C4 /* Main.storyboard */; };
 		30B29B281DBD049B008DD2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B29B271DBD049B008DD2C4 /* Assets.xcassets */; };
 		30B29B2B1DBD049B008DD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B29B291DBD049B008DD2C4 /* LaunchScreen.storyboard */; };
@@ -16,6 +17,7 @@
 		30B29B411DBD081E008DD2C4 /* GoEuroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */; };
 		30B29B421DBD081E008DD2C4 /* GoEuroKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30B29B461DBD140A008DD2C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B451DBD140A008DD2C4 /* Result.framework */; };
+		30B29B4D1DBD199C008DD2C4 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B4C1DBD199C008DD2C4 /* Unbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		305C7EDC1DBF64D4000193F2 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		30B29B1D1DBD049B008DD2C4 /* GoEuro-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoEuro-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B29B201DBD049B008DD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30B29B221DBD049B008DD2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
 		30B29B251DBD049B008DD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30B29B271DBD049B008DD2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30B29B2A1DBD049B008DD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		30B29B371DBD049B008DD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoEuroKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B29B451DBD140A008DD2C4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		30B29B4C1DBD199C008DD2C4 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = ../Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			files = (
 				30B29B411DBD081E008DD2C4 /* GoEuroKit.framework in Frameworks */,
 				30B29B461DBD140A008DD2C4 /* Result.framework in Frameworks */,
+				30B29B4D1DBD199C008DD2C4 /* Unbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305C7EDA1DBF644E000193F2 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */,
+				305C7EDC1DBF64D4000193F2 /* OfferCell.swift */,
+			);
+			name = Offers;
+			sourceTree = "<group>";
+		};
+		305C7EDB1DBF647B000193F2 /* Supporting Flies */ = {
+			isa = PBXGroup;
+			children = (
+				30B29B241DBD049B008DD2C4 /* Main.storyboard */,
+				30B29B271DBD049B008DD2C4 /* Assets.xcassets */,
+				30B29B291DBD049B008DD2C4 /* LaunchScreen.storyboard */,
+				30B29B2C1DBD049B008DD2C4 /* Info.plist */,
+			);
+			name = "Supporting Flies";
+			sourceTree = "<group>";
+		};
 		30B29B141DBD049B008DD2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				30B29B201DBD049B008DD2C4 /* AppDelegate.swift */,
-				30B29B221DBD049B008DD2C4 /* ViewController.swift */,
-				30B29B241DBD049B008DD2C4 /* Main.storyboard */,
-				30B29B271DBD049B008DD2C4 /* Assets.xcassets */,
-				30B29B291DBD049B008DD2C4 /* LaunchScreen.storyboard */,
-				30B29B2C1DBD049B008DD2C4 /* Info.plist */,
+				305C7EDA1DBF644E000193F2 /* Offers */,
+				305C7EDB1DBF647B000193F2 /* Supporting Flies */,
 			);
 			path = "GoEuro-iOS";
 			sourceTree = "<group>";
@@ -121,6 +143,7 @@
 		30B29B441DBD0842008DD2C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30B29B4C1DBD199C008DD2C4 /* Unbox.framework */,
 				30B29B451DBD140A008DD2C4 /* Result.framework */,
 				30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */,
 			);
@@ -237,6 +260,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Unbox.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -252,8 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B29B231DBD049B008DD2C4 /* ViewController.swift in Sources */,
+				30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */,
 				30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */,
+				305C7EDD1DBF64D4000193F2 /* OfferCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

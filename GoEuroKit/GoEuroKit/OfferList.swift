@@ -12,18 +12,4 @@ import Foundation
 // MARK: Model -
 ////////////////////////////////////
 
-public struct OfferList {
-    public var data: [Offer]
-}
-
-////////////////////////////////////
-// MARK: Convenience methods -
-////////////////////////////////////
-
-extension OfferList {
-    public var noOffers: Bool {
-        get {
-            return (self.data.count == 0)
-        }
-    }
-}
+public typealias OfferList = [Offer]
