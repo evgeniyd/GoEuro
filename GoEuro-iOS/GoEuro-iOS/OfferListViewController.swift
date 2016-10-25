@@ -22,13 +22,13 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.viewModel = OfferListViewModel(delegate: self)
+        self.viewModel!.fetch()
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "OrderByDateButton"), style: .plain, target: self, action: #selector(didSwitchFilterByDate))
         navigationItem.leftBarButtonItem?.imageInsets = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 20.0)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Trans", style: .plain, target: self, action: #selector(didSwitchTransportationType))
-        
-        self.viewModel = OfferListViewModel(delegate: self)
-        self.viewModel!.fetch()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: self.viewModel!.transportationSwitchButtonTitle, style: .plain, target: self, action: #selector(didSwitchTransportationType))
         
         self.title = self.viewModel!.localizedRoute
     }
@@ -102,7 +102,9 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     }
     
     @objc func didSwitchTransportationType() {
-        self.viewModel!.change(transportation: .train)
+        self.viewModel!.toggleTransportation()
+        navigationItem.rightBarButtonItem = nil
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: self.viewModel!.transportationSwitchButtonTitle, style: .plain, target: self, action: #selector(didSwitchTransportationType))
     }
     
     ////////////////////////////////////

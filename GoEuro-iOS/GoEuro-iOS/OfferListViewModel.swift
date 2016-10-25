@@ -23,10 +23,11 @@ protocol OfferListViewModelType {
     var delegate: OfferListViewModelDelegate { get set }
     var list: [OfferViewModelType] { get }
     var localizedRoute: String { get }
+    var transportationSwitchButtonTitle: String { get }
     // control
     func fetch()
     func toggleOrderByDate()
-    func change(transportation: OffersServiceTransportation)
+    func toggleTransportation()
 }
 
 ////////////////////////////////////
@@ -67,10 +68,21 @@ final class OfferListViewModel: OfferListViewModelType {
         return "Berlin → London"
     }
     
+    var transportationSwitchButtonTitle: String {
+        switch self.transportation {
+        case .flight:
+            return "✈️"
+        case .train:
+            return "🚊"
+        case .bus:
+            return "🚌"
+        }
+    }
     private let service = OffersService()
     private var offerList: Optional<OfferList>
     private let backgroundQueue = DispatchQueue(label: "com.goeuro.GoEuro-iOS.offerListViewModel.backgroundQueue", attributes: [DispatchQueue.Attributes.concurrent])
     private var isAscendingOrder = false
+    private var transportation: OffersServiceTransportation = .flight
     
     init(delegate: OfferListViewModelDelegate) {
         self.delegate = delegate
@@ -99,8 +111,18 @@ final class OfferListViewModel: OfferListViewModelType {
         }
     }
     
-    func change(transportation: OffersServiceTransportation) {
-        self.service.change(transportation)
+    func toggleTransportation() {
+        // switch enum
+        switch self.transportation {
+        case .train:
+            self.transportation = .flight
+        case .flight:
+            self.transportation = .bus
+        case .bus:
+            self.transportation = .train
+        }
+        
+        self.service.change(self.transportation)
         fetch()
     }
     

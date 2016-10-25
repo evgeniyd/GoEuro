@@ -21,6 +21,9 @@ final class OfferTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        durationLabel.textColor = UIColor.goeuroGray
+        stopsLabel.textColor = UIColor.goeuroLightgrey
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -23,39 +23,38 @@
                                     <frame key="frameInset" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price-value" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rh-jq-i6d">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WNW-6i-KmU">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="120" id="2Re-10-Av5"/>
+                                                <constraint firstAttribute="width" constant="105" id="2Re-10-Av5"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dep-value" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZL-y3-MZs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="duration-value" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZL-y3-MZs">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stop-value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-UE-uxr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stop-value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-UE-uxr">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price-value" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rh-jq-i6d">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3Jf-UE-uxr" firstAttribute="leading" secondItem="yyG-Gg-kGh" secondAttribute="leadingMargin" id="0lx-Eu-x6z"/>
-                                        <constraint firstItem="8rh-jq-i6d" firstAttribute="leading" secondItem="yyG-Gg-kGh" secondAttribute="leadingMargin" id="HgS-8e-zv4"/>
-                                        <constraint firstItem="3Jf-UE-uxr" firstAttribute="centerY" secondItem="yyG-Gg-kGh" secondAttribute="centerY" id="Hu3-R0-k4l"/>
-                                        <constraint firstItem="qZL-y3-MZs" firstAttribute="leading" secondItem="yyG-Gg-kGh" secondAttribute="leadingMargin" id="Pcc-8s-2Ac"/>
-                                        <constraint firstItem="WNW-6i-KmU" firstAttribute="trailing" secondItem="yyG-Gg-kGh" secondAttribute="trailingMargin" id="Ry4-lM-DJa"/>
+                                        <constraint firstItem="qZL-y3-MZs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="3Jf-UE-uxr" secondAttribute="trailing" constant="136.5" id="1ix-Ju-quB"/>
+                                        <constraint firstItem="8rh-jq-i6d" firstAttribute="top" secondItem="yyG-Gg-kGh" secondAttribute="topMargin" id="E4X-63-ASs"/>
+                                        <constraint firstItem="3Jf-UE-uxr" firstAttribute="leading" secondItem="yyG-Gg-kGh" secondAttribute="leadingMargin" constant="15" id="Rux-wI-onr"/>
+                                        <constraint firstItem="WNW-6i-KmU" firstAttribute="trailing" secondItem="yyG-Gg-kGh" secondAttribute="trailingMargin" constant="-15" id="Ry4-lM-DJa"/>
                                         <constraint firstItem="qZL-y3-MZs" firstAttribute="bottom" secondItem="yyG-Gg-kGh" secondAttribute="bottomMargin" id="TzJ-Rq-cbf"/>
-                                        <constraint firstItem="WNW-6i-KmU" firstAttribute="leading" relation="lessThanOrEqual" secondItem="3Jf-UE-uxr" secondAttribute="trailing" constant="143" id="ZD2-05-Vzm"/>
-                                        <constraint firstItem="8rh-jq-i6d" firstAttribute="top" secondItem="yyG-Gg-kGh" secondAttribute="topMargin" id="ctB-io-43U"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qZL-y3-MZs" secondAttribute="trailing" constant="15" id="g1j-jj-uIg"/>
                                         <constraint firstItem="WNW-6i-KmU" firstAttribute="top" secondItem="yyG-Gg-kGh" secondAttribute="topMargin" id="hX8-6D-EOw"/>
-                                        <constraint firstItem="WNW-6i-KmU" firstAttribute="leading" secondItem="qZL-y3-MZs" secondAttribute="trailing" constant="8" id="ooZ-aC-yxS"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="WNW-6i-KmU" secondAttribute="bottom" id="sf2-C4-5Nh"/>
+                                        <constraint firstItem="8rh-jq-i6d" firstAttribute="leading" secondItem="yyG-Gg-kGh" secondAttribute="leadingMargin" constant="15" id="oFS-Qt-dhS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WNW-6i-KmU" secondAttribute="bottom" constant="26" id="sf2-C4-5Nh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3Jf-UE-uxr" secondAttribute="bottom" id="x5I-Jd-UJv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
