@@ -31,7 +31,7 @@ protocol OfferListViewModelType {
 
 protocol OfferViewModelType {
     // properties
-    var localizedPriceText: String { get }
+    var localizedPriceText: String? { get }
 }
 
 ////////////////////////////////////
@@ -79,9 +79,20 @@ final class OfferListViewModel: OfferListViewModelType {
 }
 
 extension Offer: OfferViewModelType {
-    var localizedPriceText: String {
+    var localizedPriceText: String? {
         get {
-            return self.id
+            return self.price.localized()
         }
+    }
+}
+
+extension Price {
+    /// Formats the receiver as a currency string using the specified three digit currencyCode. Currency codes are based on the ISO 4217 standard.
+    func localized() -> String? {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.currencyCode = self.currency.code
+        currencyFormatter.maximumFractionDigits = (floor(self.amount) == self.amount ? 0 : 2)
+        return currencyFormatter.string(for: self.amount)
     }
 }

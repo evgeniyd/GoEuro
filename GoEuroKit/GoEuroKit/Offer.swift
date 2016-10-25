@@ -38,6 +38,15 @@ public struct Price {
 
 public enum Currency {
     case unspecified, euro
+    
+    public var code: String {
+        switch self {
+        case .euro:
+            return "EUR"
+        default:
+            return "<unknown>"
+        }
+    }
 }
 
 ////////////////////////////////////
