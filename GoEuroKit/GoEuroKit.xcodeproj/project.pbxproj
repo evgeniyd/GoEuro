@@ -13,6 +13,7 @@
 		30239D901DBECAB000C91BC7 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30239D8E1DBECAB000C91BC7 /* OffersService.swift */; };
 		30239D921DBECBAD00C91BC7 /* OffersServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30239D911DBECBAD00C91BC7 /* OffersServiceTests.swift */; };
 		30239D931DBECC2B00C91BC7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B29B481DBD1419008DD2C4 /* Result.framework */; };
+		305C7EF31DBFE8BC000193F2 /* OfferTests_PriceInEurosDouble.json in Resources */ = {isa = PBXBuildFile; fileRef = 305C7EF21DBFE8BC000193F2 /* OfferTests_PriceInEurosDouble.json */; };
 		3083AD4F1DBE1988001EAB04 /* DateFormatter+GoEuroKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083AD4E1DBE1988001EAB04 /* DateFormatter+GoEuroKit.swift */; };
 		3083AD501DBE1988001EAB04 /* DateFormatter+GoEuroKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083AD4E1DBE1988001EAB04 /* DateFormatter+GoEuroKit.swift */; };
 		3083AD521DBE19F5001EAB04 /* DateFormatter+GoEuroKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083AD511DBE19F5001EAB04 /* DateFormatter+GoEuroKitTests.swift */; };
@@ -50,6 +51,7 @@
 		30239D891DBEBA9000C91BC7 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		30239D8E1DBECAB000C91BC7 /* OffersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		30239D911DBECBAD00C91BC7 /* OffersServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersServiceTests.swift; sourceTree = "<group>"; };
+		305C7EF21DBFE8BC000193F2 /* OfferTests_PriceInEurosDouble.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OfferTests_PriceInEurosDouble.json; sourceTree = "<group>"; };
 		3083AD4E1DBE1988001EAB04 /* DateFormatter+GoEuroKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+GoEuroKit.swift"; sourceTree = "<group>"; };
 		3083AD511DBE19F5001EAB04 /* DateFormatter+GoEuroKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+GoEuroKitTests.swift"; sourceTree = "<group>"; };
 		30B099E51DBE2D380087DAFC /* Bundle+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Tests.swift"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				30E516141DBCC8D3004C1E1C /* Info.plist */,
 				30F262351DBE28A1003DDBBE /* OfferTests.json */,
 				30B099EB1DBE40930087DAFC /* OfferListTests.json */,
+				305C7EF21DBFE8BC000193F2 /* OfferTests_PriceInEurosDouble.json */,
 			);
 			name = "Supporting Flies";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				30B099EC1DBE40930087DAFC /* OfferListTests.json in Resources */,
 				30F262361DBE28A1003DDBBE /* OfferTests.json in Resources */,
+				305C7EF31DBFE8BC000193F2 /* OfferTests_PriceInEurosDouble.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

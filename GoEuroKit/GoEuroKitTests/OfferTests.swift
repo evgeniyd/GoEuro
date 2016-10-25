@@ -37,4 +37,20 @@ class OfferTests: XCTestCase {
             XCTAssert(false, dataError.localizedDescription)
         }
     }
+    
+    func testPriceInEurosDouble() {
+        do {
+            let data = try Data(contentsOfJSONFile: "OfferTests_PriceInEurosDouble")
+            
+            do {
+                let offer: Offer = try unbox(data: data)
+                XCTAssertEqual(offer.id, "3")
+            } catch let unboxError {
+                XCTAssert(false, unboxError.localizedDescription)
+            }
+        }
+        catch let dataError {
+            XCTAssert(false, dataError.localizedDescription)
+        }
+    }
 }

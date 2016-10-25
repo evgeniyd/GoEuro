@@ -12,15 +12,15 @@ import Unbox
 
 public enum OffersServiceTransportation: String {
     case flight = "w60i"
-    case train = "37yzm"
-    case bus = "3zmcy"
+    case train = "3zmcy"
+    case bus = "37yzm"
 }
 
 public class OffersService: ServiceProtocol, Requestable {
     
     public init() { }
     
-    public let actionPath = OffersServiceTransportation.flight.rawValue
+    public private(set) var actionPath = OffersServiceTransportation.flight.rawValue
     
     public typealias Value = OfferList
     public typealias Error = ServiceError
@@ -46,5 +46,9 @@ public class OffersService: ServiceProtocol, Requestable {
             }
         }
         dataTask.resume()
+    }
+    
+    public func change(_ transportation: OffersServiceTransportation) {
+        self.actionPath = transportation.rawValue
     }
 }

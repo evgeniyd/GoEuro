@@ -26,6 +26,7 @@ protocol OfferListViewModelType {
     // control
     func fetch()
     func toggleOrderByDate()
+    func change(transportation: OffersServiceTransportation)
 }
 
 ////////////////////////////////////
@@ -55,7 +56,6 @@ final class OfferListViewModel: OfferListViewModelType {
             }
             
             return ol.sorted(by: { [unowned self] (o1, o2) -> Bool in
-                
                 return self.isAscendingOrder
                     ? o1.departure > o2.departure // descending
                     : o1.departure < o2.departure // ascending
@@ -97,6 +97,11 @@ final class OfferListViewModel: OfferListViewModelType {
                 }
             }
         }
+    }
+    
+    func change(transportation: OffersServiceTransportation) {
+        self.service.change(transportation)
+        fetch()
     }
     
     func toggleOrderByDate() {

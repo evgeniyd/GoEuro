@@ -102,7 +102,7 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     }
     
     @objc func didSwitchTransportationType() {
-        print("")
+        self.viewModel!.change(transportation: .train)
     }
     
     ////////////////////////////////////

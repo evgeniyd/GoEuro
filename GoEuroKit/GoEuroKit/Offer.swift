@@ -100,7 +100,7 @@ extension Logo: UnboxableByTransform {
 }
 
 extension Price: UnboxableByTransform {
-    public typealias UnboxRawValue = String
+    public typealias UnboxRawValue = Any // b/c the API returns both Double and String
     
     init?(amount: Double) {
         self.currency = .euro
@@ -109,7 +109,14 @@ extension Price: UnboxableByTransform {
     
     public static func transform(unboxedValue: UnboxRawValue) -> Price? {
         // See the discussion: https://github.com/JohnSundell/Unbox/issues/135
-        let value = Double(unboxedValue)
-        return Price(amount: value!)
+        
+        if let d = unboxedValue as? Double {
+            return Price(amount: d)
+        }
+        if let s = unboxedValue as? String {
+            let value = Double(s)
+            return Price(amount: value!)
+        }
+        return Price(amount: 0.0, currency: .unspecified)
     }
 }
