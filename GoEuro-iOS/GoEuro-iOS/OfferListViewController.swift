@@ -27,10 +27,10 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Trans", style: .plain, target: self, action: #selector(didSwitchTransportationType))
         
-        self.title = "Berlin → London"
-        
         self.viewModel = OfferListViewModel(delegate: self)
         self.viewModel!.fetch()
+        
+        self.title = self.viewModel!.localizedRoute
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +47,7 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     }
     
     func didFailWith( _ localizedErrorText: String?) {
-        print("didFailWith: \(localizedErrorText)")
+        presentAlertWith("Error", message: "Error was:\n\(localizedErrorText)", actionButtonTitle: "Close")
     }
     
     ////////////////////////////////////
@@ -110,9 +110,13 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     ////////////////////////////////////
     
     private func temp_presentNotYetSupporteAlert() {
-        let alertController = UIAlertController(title: "Sorry...", message: "Offer details are not yet implemented!", preferredStyle: .alert)
+        presentAlertWith("Sorry...", message: "Offer details are not yet implemented!", actionButtonTitle: "I Understand...")
+    }
+    
+    func presentAlertWith(_ title: String, message: String, actionButtonTitle: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let OKAction = UIAlertAction(title: "I Understand...", style: .default)
+        let OKAction = UIAlertAction(title: actionButtonTitle, style: .default)
         alertController.addAction(OKAction)
         
         self.present(alertController, animated: true, completion:nil)

@@ -22,6 +22,7 @@ protocol OfferListViewModelType {
     // properties
     var delegate: OfferListViewModelDelegate { get set }
     var list: [OfferViewModelType] { get }
+    var localizedRoute: String { get }
     // control
     func fetch()
     func toggleOrderByDate()
@@ -62,7 +63,10 @@ final class OfferListViewModel: OfferListViewModelType {
         }
     }
     internal var delegate: OfferListViewModelDelegate
-
+    var localizedRoute: String {
+        return "Berlin → London"
+    }
+    
     private let service = OffersService()
     private var offerList: Optional<OfferList>
     private let backgroundQueue = DispatchQueue(label: "com.goeuro.GoEuro-iOS.offerListViewModel.backgroundQueue", attributes: [DispatchQueue.Attributes.concurrent])
