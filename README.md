@@ -2,7 +2,7 @@
 
 iOS client for [GoEuro](http://www.goeuro.com) service ([requirements](https://github.com/goeuro/iOS-Test)) written in Swift 3
 
-![image](Application-Preview.png)
+![image](Application-Preview-iPhone6.png)
 
 # Requirements
 - iOS 10.0 Beta (shoud work on iOS 8 and alter)
