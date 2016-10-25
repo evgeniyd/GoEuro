@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		305C7EE11DBF7ABB000193F2 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EE01DBF7ABB000193F2 /* OfferTableViewCell.swift */; };
 		305C7EE31DBF85F7000193F2 /* OfferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EE21DBF85F7000193F2 /* OfferListViewModel.swift */; };
+		305C7EE51DBF9811000193F2 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305C7EE41DBF9811000193F2 /* Nuke.framework */; };
+		305C7EE81DBFA906000193F2 /* UserInterfaceAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EE71DBFA906000193F2 /* UserInterfaceAppearance.swift */; };
+		305C7EEB1DBFA97C000193F2 /* UIFont+GoEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EEA1DBFA97C000193F2 /* UIFont+GoEuro.swift */; };
+		305C7EED1DBFA9C7000193F2 /* UIColor+GoEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EEC1DBFA9C7000193F2 /* UIColor+GoEuro.swift */; };
+		305C7EF11DBFDB48000193F2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EF01DBFDB48000193F2 /* NavigationController.swift */; };
 		30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B201DBD049B008DD2C4 /* AppDelegate.swift */; };
 		30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */; };
 		30B29B261DBD049B008DD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B29B241DBD049B008DD2C4 /* Main.storyboard */; };
@@ -48,6 +53,11 @@
 /* Begin PBXFileReference section */
 		305C7EE01DBF7ABB000193F2 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		305C7EE21DBF85F7000193F2 /* OfferListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferListViewModel.swift; sourceTree = "<group>"; };
+		305C7EE41DBF9811000193F2 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = ../Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		305C7EE71DBFA906000193F2 /* UserInterfaceAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterfaceAppearance.swift; sourceTree = "<group>"; };
+		305C7EEA1DBFA97C000193F2 /* UIFont+GoEuro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+GoEuro.swift"; sourceTree = "<group>"; };
+		305C7EEC1DBFA9C7000193F2 /* UIColor+GoEuro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GoEuro.swift"; sourceTree = "<group>"; };
+		305C7EF01DBFDB48000193F2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30B29B1D1DBD049B008DD2C4 /* GoEuro-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoEuro-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B29B201DBD049B008DD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 				30B29B411DBD081E008DD2C4 /* GoEuroKit.framework in Frameworks */,
 				30B29B461DBD140A008DD2C4 /* Result.framework in Frameworks */,
 				30B29B4D1DBD199C008DD2C4 /* Unbox.framework in Frameworks */,
+				305C7EE51DBF9811000193F2 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +116,24 @@
 			name = "Supporting Flies";
 			sourceTree = "<group>";
 		};
+		305C7EE61DBFA8D3000193F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				305C7EE71DBFA906000193F2 /* UserInterfaceAppearance.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		305C7EE91DBFA949000193F2 /* Framework Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				305C7EEA1DBFA97C000193F2 /* UIFont+GoEuro.swift */,
+				305C7EEC1DBFA9C7000193F2 /* UIColor+GoEuro.swift */,
+				305C7EF01DBFDB48000193F2 /* NavigationController.swift */,
+			);
+			name = "Framework Extensions";
+			sourceTree = "<group>";
+		};
 		30B29B141DBD049B008DD2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +158,8 @@
 			children = (
 				30B29B201DBD049B008DD2C4 /* AppDelegate.swift */,
 				305C7EDA1DBF644E000193F2 /* Offers */,
+				305C7EE61DBFA8D3000193F2 /* Utils */,
+				305C7EE91DBFA949000193F2 /* Framework Extensions */,
 				305C7EDB1DBF647B000193F2 /* Supporting Flies */,
 			);
 			path = "GoEuro-iOS";
@@ -146,6 +177,7 @@
 		30B29B441DBD0842008DD2C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				305C7EE41DBF9811000193F2 /* Nuke.framework */,
 				30B29B4C1DBD199C008DD2C4 /* Unbox.framework */,
 				30B29B451DBD140A008DD2C4 /* Result.framework */,
 				30B29B401DBD081E008DD2C4 /* GoEuroKit.framework */,
@@ -264,6 +296,7 @@
 			inputPaths = (
 				"$(SRCROOT)/../Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/Unbox.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Nuke.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -279,10 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305C7EE81DBFA906000193F2 /* UserInterfaceAppearance.swift in Sources */,
+				305C7EF11DBFDB48000193F2 /* NavigationController.swift in Sources */,
 				305C7EE11DBF7ABB000193F2 /* OfferTableViewCell.swift in Sources */,
 				305C7EE31DBF85F7000193F2 /* OfferListViewModel.swift in Sources */,
 				30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */,
 				30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */,
+				305C7EEB1DBFA97C000193F2 /* UIFont+GoEuro.swift in Sources */,
+				305C7EED1DBFA9C7000193F2 /* UIColor+GoEuro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

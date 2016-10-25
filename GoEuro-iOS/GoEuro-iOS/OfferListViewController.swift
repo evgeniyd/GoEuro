@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class OfferListViewController: UITableViewController, OfferListViewModelDelegate {
+final class OfferListViewController: UITableViewController, OfferListViewModelDelegate, ViewControllerAppearanceCustomizable {
 
     // MARK: Properties
     
@@ -21,7 +21,13 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "OrderByDateButton"), style: .plain, target: self, action: #selector(didSwitchFilterByDate))
+        navigationItem.leftBarButtonItem?.imageInsets = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 20.0)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Trans", style: .plain, target: self, action: #selector(didSwitchTransportationType))
+        
+        self.title = "Berlin → London"
         
         self.viewModel = OfferListViewModel(delegate: self)
         self.viewModel!.fetch()
@@ -37,9 +43,11 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
     ////////////////////////////////////
     
     func didUpdateData() {
-        print("didUpdateData")
-        
         tableView.reloadData()
+    }
+    
+    func didFailWith( _ localizedErrorText: String?) {
+        print("didFailWith: \(localizedErrorText)")
     }
     
     ////////////////////////////////////
@@ -64,6 +72,61 @@ final class OfferListViewController: UITableViewController, OfferListViewModelDe
         cell.configureWith(offerModelView)
         
         return cell
+    }
+    
+    ////////////////////////////////////
+    // MARK: UITableViewDelegate -
+    ////////////////////////////////////
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        temp_presentNotYetSupporteAlert()
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    ////////////////////////////////////
+    // MARK: Layout -
+    ////////////////////////////////////
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        applyCustom(DefaultViewControllerAppearance())
+    }
+    
+    ////////////////////////////////////
+    // MARK: Actions -
+    ////////////////////////////////////
+    
+    @objc func didSwitchFilterByDate() {
+        self.viewModel!.toggleOrderByDate()
+    }
+    
+    @objc func didSwitchTransportationType() {
+        print("")
+    }
+    
+    ////////////////////////////////////
+    // MARK: Alerts -
+    ////////////////////////////////////
+    
+    private func temp_presentNotYetSupporteAlert() {
+        let alertController = UIAlertController(title: "Sorry...", message: "Offer details are not yet implemented!", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "I Understand...", style: .default)
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true, completion:nil)
+    }
+    ////////////////////////////////////
+    // MARK: Status Bar Style -
+    ////////////////////////////////////
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 

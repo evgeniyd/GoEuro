@@ -15,6 +15,7 @@ import Foundation
 protocol OfferListViewModelDelegate {
     // signal
     func didUpdateData()
+    func didFailWith( _ localizedErrorText: String?)
 }
 
 protocol OfferListViewModelType {
@@ -23,6 +24,7 @@ protocol OfferListViewModelType {
     var list: [OfferViewModelType] { get }
     // control
     func fetch()
+    func toggleOrderByDate()
 }
 
 ////////////////////////////////////
@@ -32,6 +34,10 @@ protocol OfferListViewModelType {
 protocol OfferViewModelType {
     // properties
     var localizedPriceText: String? { get }
+    var localizedDepartureText: String? { get }
+    var localizedArrivalText: String? { get }
+    var localizedStopsText: String? { get }
+    var logoImageURL: URL? { get }
 }
 
 ////////////////////////////////////
@@ -43,7 +49,16 @@ import GoEuroKit
 final class OfferListViewModel: OfferListViewModelType {
     internal var list: [OfferViewModelType] {
         get {
-            return self.offerList ?? []
+            guard let ol = self.offerList else {
+                return []
+            }
+            
+            return ol.sorted(by: { [unowned self] (o1, o2) -> Bool in
+                
+                return self.isAscendingOrder
+                    ? o1.departure > o2.departure // descending
+                    : o1.departure < o2.departure // ascending
+            })
         }
     }
     internal var delegate: OfferListViewModelDelegate
@@ -51,6 +66,7 @@ final class OfferListViewModel: OfferListViewModelType {
     private let service = OffersService()
     private var offerList: Optional<OfferList>
     private let backgroundQueue = DispatchQueue(label: "com.goeuro.GoEuro-iOS.offerListViewModel.backgroundQueue", attributes: [DispatchQueue.Attributes.concurrent])
+    private var isAscendingOrder = false
     
     init(delegate: OfferListViewModelDelegate) {
         self.delegate = delegate
@@ -71,18 +87,49 @@ final class OfferListViewModel: OfferListViewModelType {
                 case .failure(let serviceError):
                     print("\(serviceError)")
                     
-                    // TODO: do a call upon failure
+                    DispatchQueue.main.async {
+                        self.delegate.didFailWith( serviceError.localizedDescription )
+                    }
                 }
             }
         }
+    }
+    
+    func toggleOrderByDate() {
+        isAscendingOrder = !isAscendingOrder
+        self.delegate.didUpdateData()
     }
 }
 
 extension Offer: OfferViewModelType {
     var localizedPriceText: String? {
-        get {
-            return self.price.localized()
-        }
+        return self.price.localized()
+    }
+    
+    var localizedDepartureText: String? {
+        return timeFrom(self.departure)
+    }
+    
+    var localizedArrivalText: String? {
+        return timeFrom(self.arrival)
+    }
+    
+    var logoImageURL: URL? {
+        return self.logo.url
+    }
+    
+    var localizedStopsText: String? {
+        return "\(self.stops) stop\(self.stops == 1 ? "" : "s")" // TODO: this is not a localized format
+    }
+    
+    // TODO: move to StringUtils....swift
+    private static let dateFormatter = DateFormatter()
+    private func timeFrom(_ date: Date) -> String {
+        Offer.dateFormatter.dateStyle = .none
+        Offer.dateFormatter.timeStyle = .short
+        Offer.dateFormatter.timeZone = TimeZone.autoupdatingCurrent
+        Offer.dateFormatter.locale = Locale.autoupdatingCurrent
+        return Offer.dateFormatter.string(from: date)
     }
 }
 
