@@ -283,7 +283,6 @@
 					};
 					30E5160C1DBCC8D3004C1E1C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QL6S7D28EA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -554,7 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoEuroKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goeuro.GoEuroKitTests;
@@ -567,7 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoEuroKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goeuro.GoEuroKitTests;
