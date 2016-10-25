@@ -237,12 +237,10 @@
 				TargetAttributes = {
 					30B29B1C1DBD049B008DD2C4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QL6S7D28EA;
 						ProvisioningStyle = Automatic;
 					};
 					30B29B301DBD049B008DD2C4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QL6S7D28EA;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 30B29B1C1DBD049B008DD2C4;
 					};
@@ -462,7 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GoEuro-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.GoEuro-iOS";
@@ -475,7 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GoEuro-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.GoEuro-iOS";
@@ -489,7 +487,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GoEuro-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.GoEuro-iOSTests";
@@ -504,7 +502,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = QL6S7D28EA;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GoEuro-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.GoEuro-iOSTests";
