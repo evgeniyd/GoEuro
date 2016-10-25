@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		305C7EDD1DBF64D4000193F2 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EDC1DBF64D4000193F2 /* OfferCell.swift */; };
+		305C7EE11DBF7ABB000193F2 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EE01DBF7ABB000193F2 /* OfferTableViewCell.swift */; };
+		305C7EE31DBF85F7000193F2 /* OfferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C7EE21DBF85F7000193F2 /* OfferListViewModel.swift */; };
 		30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B201DBD049B008DD2C4 /* AppDelegate.swift */; };
 		30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */; };
 		30B29B261DBD049B008DD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B29B241DBD049B008DD2C4 /* Main.storyboard */; };
@@ -45,7 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		305C7EDC1DBF64D4000193F2 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
+		305C7EE01DBF7ABB000193F2 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		305C7EE21DBF85F7000193F2 /* OfferListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferListViewModel.swift; sourceTree = "<group>"; };
 		30B29B1D1DBD049B008DD2C4 /* GoEuro-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoEuro-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B29B201DBD049B008DD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				30B29B221DBD049B008DD2C4 /* OfferListViewController.swift */,
-				305C7EDC1DBF64D4000193F2 /* OfferCell.swift */,
+				305C7EE01DBF7ABB000193F2 /* OfferTableViewCell.swift */,
+				305C7EE21DBF85F7000193F2 /* OfferListViewModel.swift */,
 			);
 			name = Offers;
 			sourceTree = "<group>";
@@ -276,9 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305C7EE11DBF7ABB000193F2 /* OfferTableViewCell.swift in Sources */,
+				305C7EE31DBF85F7000193F2 /* OfferListViewModel.swift in Sources */,
 				30B29B231DBD049B008DD2C4 /* OfferListViewController.swift in Sources */,
 				30B29B211DBD049B008DD2C4 /* AppDelegate.swift in Sources */,
-				305C7EDD1DBF64D4000193F2 /* OfferCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

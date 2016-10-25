@@ -20,7 +20,7 @@ public class OffersService: ServiceProtocol, Requestable {
     
     public init() { }
     
-    public let actionPath = OffersServiceTransportation.flight
+    public let actionPath = OffersServiceTransportation.flight.rawValue
     
     public typealias Value = OfferList
     public typealias Error = ServiceError
@@ -30,6 +30,10 @@ public class OffersService: ServiceProtocol, Requestable {
         let dataTask = defaultSession.dataTask(with: self.request) {(data, response, error) -> Void in
             if let data = data {
                 do {
+                    // DEBUG
+                    var datastring = String(data: data, encoding: String.Encoding.utf8)
+                    print(datastring)
+                    
                     let offerList: OfferList = try unbox(data: data)
                     completion(.success(offerList))
                 } catch let unboxError {
