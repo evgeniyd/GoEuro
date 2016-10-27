@@ -14,7 +14,7 @@ iOS client for [GoEuro](http://www.goeuro.com) service ([requirements](https://g
 The app uses [Carthage](https://github.com/Carthage/Carthage) as a dependancy manager. All libs the project is linked to are listed in [Cartfile](Cartfile).
 * [Nuke](https://github.com/kean/Nuke) - Remote Images
 * [Unbox](https://github.com/JohnSundell/Unbox) - JSON Mapping
-* [Result](https://github.com/antitypical/Result) - Result-oriented Programming
+* [Result](https://github.com/antitypical/Result) - Result-oriented Programming ([docs](http://cocoadocs.org/docsets/Result/3.0.0/))
 
 # Setup
 
