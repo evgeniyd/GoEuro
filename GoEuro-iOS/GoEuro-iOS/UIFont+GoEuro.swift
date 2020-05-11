@@ -16,6 +16,6 @@ extension UIFont {
     }
     
     class func goeuroScreenTitleFont(ofSize fontSize: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightMedium)
+        return UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.medium)
     }
 }

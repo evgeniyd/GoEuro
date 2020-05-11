@@ -39,8 +39,8 @@ extension ViewControllerAppearanceCustomizable where Self: UIViewController {
     func applyCustom(_ appearance: ViewControllerAppearance) {
         self.navigationController?.navigationBar.tintColor = appearance.navigationBarButtonsColor
         self.navigationController?.navigationBar.barTintColor = appearance.navigationBarBackgroundColor
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : appearance.navigationBarTitleColor,
-                                                                        NSFontAttributeName : appearance.navigationBarTitleFont]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : appearance.navigationBarTitleColor,
+                                                                        NSAttributedString.Key.font : appearance.navigationBarTitleFont]
         self.navigationController?.navigationBar.isTranslucent = false
     }
 }

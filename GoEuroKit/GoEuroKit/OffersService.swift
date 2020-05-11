@@ -31,8 +31,8 @@ public class OffersService: ServiceProtocol, Requestable {
             if let data = data {
                 do {
                     // DEBUG
-                    var datastring = String(data: data, encoding: String.Encoding.utf8)
-                    print(datastring)
+                    let datastring = String(data: data, encoding: String.Encoding.utf8)
+                    debugPrint(datastring)
                     
                     let offerList: OfferList = try unbox(data: data)
                     completion(.success(offerList))

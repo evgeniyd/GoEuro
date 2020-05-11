@@ -79,7 +79,7 @@ final class OfferListViewModel: OfferListViewModelType {
         }
     }
     private let service = OffersService()
-    private var offerList: Optional<OfferList>
+    private var offerList: OfferList?
     private let backgroundQueue = DispatchQueue(label: "com.goeuro.GoEuro-iOS.offerListViewModel.backgroundQueue", attributes: [DispatchQueue.Attributes.concurrent])
     private var isAscendingOrder = false
     private var transportation: OffersServiceTransportation = .flight
